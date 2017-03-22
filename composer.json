@@ -1,0 +1,11 @@
+{
+    "name": "vivienln/pilot",
+    "description": "Laravel admin panel",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "VivienLN\\Pilot\\": "src/"
+        }
+    }
+}
