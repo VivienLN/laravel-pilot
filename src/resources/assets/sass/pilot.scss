@@ -1,0 +1,190 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "trumbowyg";
+
+// General
+html {
+	height:100%;
+}
+a {
+	transition: .4s;
+	svg, g, path {
+		fill:$link-color;
+		transition:inherit;
+	}
+	&:hover, &:focus, &:active {
+		svg, g, path {
+			fill:$link-hover-color;
+		}
+	}
+}
+
+.btn {
+	svg {
+		height:.9rem;
+		width:auto;
+		vertical-align:middle;
+	}
+}
+
+// fix chrome
+select.form-control[multiple] {
+	overflow:auto;
+}
+
+.btn-primary,
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+	svg, g, path {
+		fill:$btn-primary-color;
+	}
+}
+
+// login page
+.page-login {
+	height:100%;
+	background:$gray-dark;
+	#wrapper {
+		height:100%;
+		position: relative;
+	}
+	.form {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width:400px;
+		max-width:90%;
+		margin:0 auto;
+		background:#fff;
+		padding: 2rem ;
+		box-shadow:0 1px 12px rgba(0,0,0,.6);
+		display:inline-block;
+	}
+	.form-group {
+		margin-bottom:2rem;
+	}
+	.form-control {
+		background:transparent none;
+		border:none;
+		border-bottom: 2px solid $gray-lighter;
+		border-radius:0;
+		line-height:1.2;
+		padding:.4rem .8rem;
+		font-size:1.2rem;
+		transition:.4s;
+		margin-bottom:.4rem;
+		&:hover {
+			border-bottom-color: $gray-light;
+		}
+		&:focus {
+			border-bottom-color: $brand-primary;
+		}
+	}
+	.custom-checkbox label {
+		margin-bottom:0;
+	}
+	.form-group label {
+		margin-bottom:.5rem;
+	}
+	.btn svg {
+		height:1rem;
+		width:auto;
+	}
+}
+
+// admin pages
+.header-main {
+	background: #00000c;
+	color:#fff;
+	padding:1rem 1.4rem;
+	margin:0;
+	h1 {
+		margin:0;
+		font-weight:200;
+		font-size:1.5rem;
+	}
+	.pull-right {
+		line-height:1.5rem * $headings-line-height;
+	}
+}
+
+.sidebar-main {
+	padding: 2rem 0;
+	background:$gray-dark;
+	.nav {
+		//margin-bottom:1rem;
+		//padding:1rem 0;
+		//border-bottom:1px solid rgba(255, 255, 255, .1);
+		li {
+			display:block;
+			a {
+				$nav-link-color:desaturate(lighten($gray-dark, 40%), 20%);
+				$nav-link-color-hover:#f3dcb2;
+				position:relative;
+				display:block;
+				padding: 1rem 1.4rem;
+				transition:.4s;
+				color:$nav-link-color;
+				text-shadow:0 1px 1px rgba(0,0,0,.3);
+				overflow: hidden;
+				white-space: nowrap;
+				svg {
+					display:inline-block;
+					vertical-align:middle;
+					height:1.4rem;
+					width:auto;
+					margin-right:.4rem;
+				}
+				> span {
+					display:inline-block;
+					vertical-align:middle;
+				}
+				svg, g, path {
+					transition:.4s;
+					fill:$nav-link-color;
+				}
+				&:hover, &:focus {
+					text-decoration:none;
+					background-color:darken($gray-dark, 10%);
+					color:$nav-link-color-hover;
+					text-shadow:1px 1px 4px rgba(0,0,0,.7);
+					svg, g, path {
+						fill:$nav-link-color-hover;
+					}
+				}
+				&.active {
+					background-color:$brand-primary;//rgba(0,0,0,.35);
+					color:#fff;
+					text-shadow:0 1px 1px rgba(0,0,0,.3);
+					svg, g, path {
+						fill:#fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.content-main {
+	padding:2rem;
+	h2 {
+		margin-bottom:2rem;
+	}
+}
+
+.table {
+	border:1px solid $table-border-color;
+}
+
+label {
+	font-weight:bold;
+}
+
